@@ -40,4 +40,4 @@ console.warn("Solo falta 1 día para finalizar el Proyecto");
 console.info(Datos);
 
 //6.trace muestra la documentación de console con detalles.
-console.trace();
+console.trace(); 
