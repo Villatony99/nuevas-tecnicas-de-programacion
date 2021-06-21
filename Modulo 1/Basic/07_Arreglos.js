@@ -89,7 +89,7 @@ var usuarios = [
     { nombre: "karina", netflix: true }
 ];
 var usuariosQueTienenNetflix = usuarios.filter(usuarios => {
-    return usuarios.netflix;
+    return usuarios.netflix; 
   });
    
   console.log(usuariosQueTienenNetflix);
