@@ -83,7 +83,7 @@ console.log(PrimerValorMayorA)
 
 //6.filter
 var usuarios = [
-    { nombre: "pepe", netflix: true },
+    { nombre: "pepe", netflix: true }, 
     { nombre: "ana", netflix: false },
     { nombre: "chucho", netflix: false },
     { nombre: "karina", netflix: true }

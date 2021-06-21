@@ -2,7 +2,7 @@
 */
 //retornar valores
 function saludar(){
-return "hola soy Anthony";
+return "hola soy Anthony"; 
 }
 //funciones void
 function saludar2(){
