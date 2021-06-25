@@ -1,27 +1,17 @@
 const express =require('express');
+
 //generar aplicacion express
 const app = express()
-//EndPoint
-app.get('/', (req,res)=>{
-res.send("Hola Mundo soy anthony")
-})
 
-app.get('/saludo',(req,res)=>{
-    req.query
-    const {
-        query: { nombre, apellido } } = req;
+//Routes
+const {RouterIndex}=require('./routes/index.js')
 
-    res.json({
-        saludo:`Hola tu eres ${nombre} ${apellido}` ,
-    })
-})
+app.use("/",RouterIndex)
+// app.use("/user",RouterIndex)
+// app.use("/user/data",RouterIndex)
+app.use(RouterIndex)
+app.use(" ",RouterIndex)
 
-app.get('/saludo/:nombre',(req,res)=>{
-    const { params : { nombre } } = req
-    res.json({
-        nombre:nombre
-    })
-})
 app.listen(3000,()=>{
     console.log("Servidor escuchando http://localhost:3000")
 })
