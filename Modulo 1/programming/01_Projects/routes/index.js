@@ -14,13 +14,12 @@ router
 .get("/saludo",(req,res)=>{
     const { query } = req;
     res.json({
-        saludo:`Hola soy ${query.nombre} ${query.apellido}` ,
-    })
-    .get('/saludo/:nombre',(req,res)=>{
-        const { params } = req
-        res.json({
-            nombre:params.nombre
-        })
+        saludo:`Hola soy ${query.nombre} ${query.apellido}` 
+    })  
+}).get('/saludo/:nombre',(req,res)=>{
+    const { params } = req
+    res.json({
+        nombre:params.nombre
     })
 })
 
