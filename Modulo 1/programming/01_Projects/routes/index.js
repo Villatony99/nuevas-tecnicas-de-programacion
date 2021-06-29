@@ -1,17 +1,17 @@
 //Traemos el paquete
 const { Router } = require('express')
+const { dataValidator } =require('../middlewares/DataValidator')
+const { user } = require('../lib/Esquemas/User')
 
 //Inicializamos Router
 const router = Router()
 
 //Creacion de los endPoint
 router
-.get("/",(req,res)=>{
-    res.send("Hola Mundo soy anthony")
-}).get("/",(req,res)=>{
-    res.send("Hola Mundo soy anthony")
+.get("/",dataValidator,(req,res)=>{
+    res.send(req.pruebaDeMiMiddleware)
 })
-.get("/saludo",(req,res)=>{
+.get("/saludo",dataValidator("query",user),(req,res)=>{
     const { query } = req;
     res.json({
         saludo:`Hola soy ${query.nombre} ${query.apellido}` 
